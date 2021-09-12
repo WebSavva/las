@@ -1,0 +1,118 @@
+.header{
+    background-color: $color-primary;
+    color:$color-tertiary;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    @media only screen and (max-width:$md-break){
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+    }
+    &__brand{
+        display: flex;
+        padding: .5rem 0;
+        align-items: center;
+        margin-left: 2rem;
+    }
+    &__logo{
+        width: 5rem;
+        height: 5rem;
+    }
+    &__name{
+        font-size: 3rem;
+        margin-left: 2rem;
+        letter-spacing: .3rem;
+        font-weight: 100;
+    }
+    &__nav{
+        background-color: $color-tertiary;
+        margin-left: auto;
+        padding-right: 1rem;
+        align-self: stretch;
+        display: grid;
+        place-content: center center;
+        position: relative;
+        transition: display .4s;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -7%;
+            width:10%;
+            background-color: $color-tertiary;
+            height: 101%;
+            clip-path: polygon(70% 0, 100% 0 ,100% 100%,0 100%);
+            @media only screen and (max-width:$md-break){
+                display: none;
+            }
+        }
+        @media only screen and (max-width:$md-break){
+            margin-left: unset;
+            grid-column: 1 / -1;
+            overflow: hidden;
+        }
+        &.invisible {
+            @media only screen and (max-width:$md-break){
+                visibility: hidden;
+                max-height: 0;
+                transition: visibility .3s .2s, max-height .2s;
+            }
+        }
+        
+        &.visible {
+            @media only screen and (max-width:$md-break){
+                visibility: visible;
+                max-height: 200rem;
+                transition: visibility .1s, max-height .3s .2s;
+            }
+        }
+    }
+    &__menu{
+        display: flex;
+        list-style: none;
+        font-size: 1.7rem;
+        margin-right: 2rem;
+        padding-left: 1.5rem;
+        @media only screen and (max-width:$md-break){
+            flex-direction: column;
+        }
+    }
+    &__item{
+        padding:1rem 2rem;
+    }
+    &__link{
+        &:visited,
+        &:link{
+        display: block;
+        text-decoration: none;
+        color: $color-primary;
+        position: relative;
+        transition: all .4s;
+        }
+        &:hover{
+            opacity: .6;
+            transform: translateY(.1rem);
+        }
+    }
+
+    &__link--active{
+        color: rgba($color-primary,.6) !important;
+    }
+    &__btn-menu{
+        display: none;
+        outline: none;
+        background-color: transparent;
+        border: .1rem solid rgba($color-tertiary,.6);
+        border-radius: .7rem;
+        @media only screen and (max-width:$md-break){
+            display: block;
+            margin-right: 1.5rem;
+            justify-self: end;
+        }
+    }
+    &__btn-icon{
+        font-size: 3.5rem;
+        color: $color-tertiary;
+        padding: .5rem;
+    }
+}

@@ -1,0 +1,32 @@
+.features{
+    padding: 2rem 0;
+    &__heading{
+        text-align: center;
+    }
+    &__icon{
+        display: block;
+        color: $color-primary;
+        font-size: 10rem;
+    }
+    &__blocks{
+        padding: 5rem 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+        grid-column-gap: 3rem;
+        grid-row-gap: 5rem;
+        justify-items: center;
+    }
+    &__block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__name{
+        margin-top: 1.5rem;
+        font-size: 2rem;
+        font-weight: 500;
+        color: rgba($color-primary,.8);
+        letter-spacing: .1rem;
+        
+    }
+}

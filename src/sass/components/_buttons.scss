@@ -1,0 +1,26 @@
+.cta{
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    &--primary{
+        background-color: $color-secondary;
+        color: $color-tertiary;
+    }
+    &--secondary{
+        background-color: $color-tertiary;
+        color: $color-secondary;
+    }
+}
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    color: $color-tertiary;
+    border: 0;
+    outline: none;
+    border-radius: 1rem;
+    &--secondary{
+        background-color: $color-secondary;
+    }
+}

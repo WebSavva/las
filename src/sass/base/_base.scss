@@ -1,0 +1,26 @@
+html{
+    font-size: 62.5%;//10px is equal to 62.5% per cent of 16px
+
+    @media only screen and (max-width:$md-break){
+        font-size: 50%;
+    }
+}
+body{
+    box-sizing: border-box;
+    font-family: $font-primary;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 114rem;
+    margin: 0 auto;
+    padding: 4rem;
+    @media (max-width:1000px){
+        width: 100%;
+    }
+}

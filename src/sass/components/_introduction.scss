@@ -1,0 +1,51 @@
+.introduction{
+    background-image: url(../assets/img/rack-of-tshirts.jpg);
+    background-size: cover;
+    background-position: 85%;
+    background-attachment: fixed;
+    min-height: 110vh;
+    padding-top: 10rem;
+    @media only screen and (max-width:$md-break){
+        height: min-content;
+        padding-top: 2rem;
+        background-position: bottom;
+    }
+    &__content{
+        display: grid;
+        grid-template-rows: repeat(2,max-content) repeat(2,min-content);
+        grid-row-gap: 3rem;
+        justify-items: start;
+        justify-content: start;
+        align-content: center;
+        width: 100%;
+        @media only screen and (max-width:$md-break){
+            justify-content: center;
+            justify-items: center;
+        }
+        
+    }
+    &__text{
+        font-size: 2rem;
+        color: rgba($color-white,.8);
+        font-weight: 300;
+        width: 50%;
+        @media only screen and (max-width:$md-break){
+            width: 80%;
+            text-align: center;
+        }
+    }
+    &__main-heading{
+        @media only screen and (max-width:$md-break){
+            text-align: center;
+        }
+    }
+    &__subheading{
+        transform: translateY(-2rem);
+        @media only screen and (max-width:$md-break){
+            transform: translateY(0);
+        }
+    }
+    &__btn{
+        
+    }
+}

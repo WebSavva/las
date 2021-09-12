@@ -1,0 +1,26 @@
+.heading-1{
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    padding: 0;
+    &--light{
+        color: $color-white;
+        text-shadow: 0.2rem .2rem .5rem rgba($color-black,.4);
+    }
+    &--blue{
+        color: $color-secondary;
+    }
+}
+.heading-3{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    &--light{
+        color: $color-white;
+        text-shadow: 0.2rem .2rem .5rem rgba($color-black,.4);
+    }
+}
+.heading-4{
+    font-size: 1.7rem;
+    text-shadow: 0.1rem .1rem .1rem rgba($color-black,.2);
+}

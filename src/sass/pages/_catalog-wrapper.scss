@@ -1,0 +1,252 @@
+.catalog-wrapper{
+    display: grid;
+    grid-template-columns:minmax(min-content,20%) 1fr;
+    @media (max-width:700px){
+        grid-template-columns: 1fr;
+    }
+}
+.filter{
+    display: grid;
+    align-self: start;
+    border: .1rem solid rgba($color-primary,.2);
+    grid-template-rows: repeat(6,minmax(min-content,3rem));
+    padding: 1.5rem;
+    @media (max-width:700px){
+        margin-top: 3rem;
+        justify-self: center;
+        width: 70%;
+    }
+    &__heading{
+       justify-self: center;
+       align-self: center;
+       font-size: 2rem;
+    }
+    &__check-group{
+        display: grid;
+        grid-template: repeat(2,min-content) / repeat(2,min-content);
+        grid-gap: 1rem;
+        justify-content: space-around;
+    }
+    &__check-label{
+        font-size: 1.4rem;
+        padding-left: .6rem;
+        font-family: $font-primary;
+    }
+    &__form-group{
+        display: grid;
+        grid-template-rows: repeat(2,min-content);
+        grid-row-gap: 1rem;
+        align-items: start;
+    }
+    &__form-heading{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    &__input{
+        border: .1rem solid $color-primary;
+        padding: .4rem;
+        font-family: $font-primary;
+        font-weight: 300;
+        display: block;
+        color: rgba($color-primary,1);
+        font-size: 1.1rem;
+        &:focus{
+            outline: none;
+        }
+        &--rounded{
+            border-radius: 10rem;
+        }
+        &--range{
+            -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+            width: 100%; /* Specific width is required for Firefox. */
+            background: $color-primary; /* Otherwise white in Chrome */
+            height: 1rem;
+            &::-webkit-slider-thumb{
+                -webkit-appearance: none;
+                width: 1.6rem;
+                height: 1.6rem;
+                background: $color-secondary;
+                border-radius: 5rem;
+              }
+            &:focus {
+                outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+              }
+            &::-ms-track {
+                width: 100%;
+                cursor: pointer;
+                  /* Hides the slider so custom styles can be added */
+            background: transparent; 
+            border-color: transparent;
+            color: transparent;
+            background: $color-primary;
+            color: $color-primary;
+            border: none;
+            }    
+            &::-webkit-slider-runnable-track{
+                background: transparent;
+                border: none;
+                
+                
+            }
+        }
+    }
+    &__input-group{
+       display: grid;
+       grid-template-columns: repeat(2, minmax(4rem, 40%));
+       grid-gap:1rem ;
+       justify-content: space-between;
+    }
+    &__input-checkbox-group{
+        display: flex;
+    }
+    
+    &__submit{
+        align-self: center;
+    }
+}
+.catalog{
+    &__content{
+    display: grid;
+    padding: 3rem 5rem;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,30rem));
+    grid-column-gap: 3rem;
+    grid-row-gap: 2rem;
+    justify-content: space-evenly;
+    }
+    &__item{
+        display: grid;
+        grid-template-rows:min-content minmax(min-content,17rem);
+        border: .2rem solid rgba($color-primary,.6);
+        border-radius: .3rem;
+    }
+    &__description{
+        text-decoration: none;
+        border: none;
+        color: $color-primary;
+        grid-row: 2 / span 1;
+        display: grid;
+        grid-template-rows:  repeat(3,min-content);
+        grid-template-columns: repeat(2,auto);
+        grid-column-gap: 5rem;
+        padding-bottom: 2rem;
+        justify-self: stretch;
+        padding: 0 2rem;
+        align-content: space-evenly;
+        align-items: end;
+    }
+    &__img{
+        width: 100%;
+        //border-bottom: .2rem solid $color-primary;
+        grid-row: 1 / span 1;
+        height: 25rem;
+    }
+    &__name{
+        grid-column: 1/-1;
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    &__sizes-set{}
+    &__sizes-heading,&__rating{
+        font-size: 1.4rem;
+    }
+    &__sizes{
+        display: flex;
+    }
+    &__size{
+        border: .1rem solid $color-primary;
+        border-radius: 100%;
+        font-size: 1.3rem;
+        width: 2rem;
+        height: 2rem;
+        display: grid;
+        place-items: center;
+        &:not(:last-child){
+            margin-right: .7rem;
+        }
+    }
+    &__cart{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: .3rem;
+        align-items: center;
+    }
+    &__cart-icon{
+        font-size: 1.8rem;
+        justify-self: end;
+    }
+    &__item-amount{
+        font-size: 1.4rem;
+        justify-self: center;
+        border: .1rem solid $color-primary;
+        border-radius: 1rem;
+        padding:.2rem 1rem;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+    &__number{}
+    &__amount-arrow-up,&__amount-arrow-down{
+        background-color:$color-primary;
+        width: .6rem;
+        height: .6rem;
+        border-radius: .2rem;
+    }
+    &__amount-arrow-up{
+        clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    }
+    &__amount-arrow-down{
+        clip-path: polygon(0 0, 50% 100%, 100% 0)
+    }
+    &__rating,&__price{
+        padding-bottom: 1rem;
+    }
+    &__rating-heading{}
+    &__stars-set{
+        display: flex;
+    }
+    &__star-icon{
+        width: 1.4rem;
+        height: 1.4rem;
+        &:not(:last-child){
+            margin-right: .5rem;
+        }
+    }
+    &__price{
+        font-size: 2.3rem;
+        font-weight: 300;
+        justify-self: end;
+    }
+    &__pagination{
+        grid-column: 1/-1;
+        font-size: 1.3rem;
+        display: flex;
+        list-style: none;
+        justify-self:center;
+    }
+    &__pagination-item{
+        padding: 1rem;
+        border: .1rem solid $color-primary;
+        flex: 1;
+        font-weight: 500;
+        border: .1rem solid rgba($color-primary,.6);
+        &:first-child{
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            width: 30%;
+        }
+        &:last-child{
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            width: 30%;
+        }
+    }
+    &__pagination-link{
+        text-decoration: none;
+        color: $color-secondary;
+    }
+    &__pagination-link--disabled{
+        color: $color-primary;
+        opacity: .8;
+    }
+}

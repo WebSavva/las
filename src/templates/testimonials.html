@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title><%= htmlWebpackPlugin.options.title %></title> 
+</head>
+<body>
+    <!-- WRAPPER -->
+    <div class="wrappper">
+        <!-- HEADER -->
+            <header class="header">
+                <div class="header__brand">
+                <img src="img/logo.svg" alt="LAS Logo" class="header__logo">
+                    <div class="header__name">Online Outfit</div>
+                </div>
+                <button class="header__btn-menu"><i class="fas fa-bars header__btn-icon"></i></button>
+                <nav class="header__nav invisible">
+                    <ul class="header__menu">
+                        <li class="header__item"><a href="index.html" class="header__link header__link--active">Home</a></li>
+                        <li class="header__item"><a href="categories.html" class="header__link">Catalog</a></li>
+                        <li class="header__item"><a href="testimonials.html" class="header__link">Feedbacks</a></li>
+                        <li class="header__item"><a href="contacts.html" class="header__link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </header>
+        <!-- TESTIMONIALS -->
+            <section class="testimonials">
+                <!-- TESTIMONIALS HEADING -->
+                <h1 class="testimonials__heading">What customers say about us ...</h1>
+                <!-- TESTIMONIALS CARDS -->
+                <div class="testimonials__content">
+                    <div class="testimonials__card">
+                        <div class="testimonials__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia dolores saepe eaque et minus alias, repellendus rem? Repellendus iste assumenda vitae voluptatibus?</div>
+                        <figure class="testimonials__img-holder"><img src="img/customer-img-1.jpg" alt="Customer 1" class="testimonials__img"></figure>
+                        <div class="testimonials__customer-info">
+                            <h3 class="testimonials__customer-name">Jane Warren</h3>
+                            <h5 class="testimonials__customer-occupation">Cloth Designer at "Dock & Label"</h5>
+                        </div>
+                    </div>
+                    <div class="testimonials__card">
+                        <div class="testimonials__text">Beatae ea sit impedit a nobis nulla dolores enim ipsum expedita quo repellendus perferendis fugit, sequi quia consequatur, ex quaerat? Architecto iusto exercitationem nam enim?</div>
+                        <figure class="testimonials__img-holder"><img src="img/customer-img-2.jpg" alt="Customer 2" class="testimonials__img"></figure>
+                        <div class="testimonials__customer-info">
+                            <h3 class="testimonials__customer-name">Helen Utras</h3>
+                            <h5 class="testimonials__customer-occupation">Architect at "New Generation co" </h5>
+                        </div>
+                    </div>
+                    <div class="testimonials__card">
+                        <div class="testimonials__text">Quia, harum! Illum, obcaecati minus vero beatae est quia dolorem voluptatum architecto veniam vel, qui velit molestias labore, expedita repellat totam blanditiis eius similique rerum!</div>
+                        <figure class="testimonials__img-holder"><img src="img/customer-img-3.jpg" alt="Customer 3" class="testimonials__img"></figure>
+                        <div class="testimonials__customer-info">
+                            <h3 class="testimonials__customer-name">Mike Hallword</h3>
+                            <h5 class="testimonials__customer-occupation">Photographer with 15 year experience</h5>
+                        </div>
+                    </div>
+                    <div class="testimonials__card">
+                        <div class="testimonials__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptates quidem asperiores odio a doloribus ducimus reprehenderit tempore voluptas quod?</div>
+                        <figure class="testimonials__img-holder"><img src="img/customer-img-4.jpg" alt="Customer 4" class="testimonials__img"></figure>
+                        <div class="testimonials__customer-info">
+                            <h3 class="testimonials__customer-name">Si Hung-Lo</h3>
+                            <h5 class="testimonials__customer-occupation">Chinese actress</h5>
+                        </div>
+                    </div>
+                    <div class="testimonials__card">
+                        <div class="testimonials__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic porro quibusdam voluptate magni labore facilis numquam deserunt, ab perspiciatis accusamus, quam nobis quo, incidunt eaque nemo! Dolorum voluptas architecto sequi.</div>
+                        <figure class="testimonials__img-holder"><img src="img/customer-img-5.jpg" alt="Customer 5" class="testimonials__img"></figure>
+                        <div class="testimonials__customer-info">
+                            <h3 class="testimonials__customer-name">Stefan Smilo</h3>
+                            <h5 class="testimonials__customer-occupation">Dancer in the theatre</h5>
+                        </div>
+                    </div>
+                    <div class="testimonials__card">
+                        <div class="testimonials__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, iusto. Culpa, magnam ullam.</div>
+                        <figure class="testimonials__img-holder"><img src="img/customer-img-6.jpg" alt="Customer 6" class="testimonials__img"></figure>
+                        <div class="testimonials__customer-info">
+                            <h3 class="testimonials__customer-name">Eugene Dorowan</h3>
+                            <h5 class="testimonials__customer-occupation">Programmer at Google</h5>
+                        </div>
+                    </div>
+                    <div class="testimonials__card">
+                        <div class="testimonials__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, veniam amet illum optio maxime commodi.</div>
+                        <figure class="testimonials__img-holder"><img src="img/customer-img-7.jpg" alt="Customer 7" class="testimonials__img"></figure>
+                        <div class="testimonials__customer-info">
+                            <h3 class="testimonials__customer-name">Tatyana Vasylieva</h3>
+                            <h5 class="testimonials__customer-occupation">Russian Beauty Blogger</h5>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="testimonials__cta">Find Out More <span class="testimonials__arrow-right">&rightarrow;</span></a>
+            </section>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p class="footer__copyright">
+                &copy;  Copyright  2020
+            </p>
+            <p class="footer__text">The copying of information deployed on the website is prohibited by the law. </p>
+            <div class="footer__pay-systems">
+                <i class="footer__icon fab fa-cc-paypal"></i>
+                <i class="footer__icon fab fa-cc-visa"></i>
+                <i class="footer__icon fab fa-cc-mastercard"></i>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

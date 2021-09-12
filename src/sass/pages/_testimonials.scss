@@ -1,0 +1,93 @@
+.testimonials {
+    &__content{
+        padding: 2rem 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(40rem, 1fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        grid-auto-rows: 25rem;
+        @media only screen and (max-width:$sm-break){
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__heading{
+        color: $color-secondary;
+        font-size: 3.5rem;
+        text-align: center;
+        margin: 2rem;
+        font-weight: 200;
+        letter-spacing: .2rem;
+    }
+    &__card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 10rem min-content;
+        background-color: rgba($color-tertiary,.7);
+        padding: 2rem;
+        border-radius: .2rem;
+        box-shadow: .1rem .1rem 1.5rem rgba($color-black,.2);
+        grid-row-gap: 1rem;
+    }
+    &__text{
+        font-size: 1.5rem;
+        grid-column: 1 / -1;
+        grid-row: 1 / span 1;
+        line-height: 1.5;
+        font-style: italic;
+        color: rgba($color-primary,.9);
+    }
+    &__customer-info{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 2;
+        display: grid;
+        grid-template-rows: max-content min-content;
+        align-self: center;
+    }
+    &__customer-name{
+        font-size: 1.8rem;
+        color: $color-primary;
+    }
+    &__customer-occupation{
+        font-size: 1.4rem;
+        color: $color-secondary;
+    }
+    &__img-holder{
+        grid-column: 2 / -1;
+        grid-row: 2 / span 2;
+        justify-self: end;
+    }
+    &__img{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 10rem;
+        object-fit: cover;
+        box-shadow: .1rem .1rem 1.5rem rgba($color-black,.2);
+    }
+    &__cta{
+        display: block;
+        margin: 2rem auto;
+        color: $color-secondary;
+        font-size: 2rem;
+        padding: 1rem;
+        width: 20rem;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 400;
+        transition: all .5s;
+        
+    }
+    &__cta:hover{
+        opacity: .7;
+        transform: scale(1.05);
+    }
+    &__arrow-right{
+        display: inline-block;
+        transition: all .4s;
+    }
+    &__cta:hover &__arrow-right{
+        transform: translateX(.8rem);
+    }
+
+
+}

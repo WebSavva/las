@@ -1,0 +1,32 @@
+.footer{
+    background-color: $color-primary;
+    color:$color-tertiary;
+    display: grid;
+    grid-template-rows: repeat(3,min-content);
+    place-items: center center;
+    grid-row-gap: 1rem;
+    font-size: 1.7rem;
+    &__copyright{
+        padding-top: 2rem;
+    }
+    &__text{
+        text-align: center;
+        width: 40%;
+        padding: 2rem 0;
+    }
+    &__pay-systems{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        width: 20%;
+        margin-bottom: 2rem;
+        @media only screen and (max-width:$md-break){
+            width: 50%;
+        }
+    }
+    &__icon{
+        color: $color-tertiary;
+        font-size: 4rem;
+        
+    }
+}
